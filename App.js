@@ -8,6 +8,7 @@ import {
 
 import moment from "moment";
 import SetAlarm from './components/SetAlarm';
+import SetLocation from './components/SetLocation';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,9 +28,14 @@ const styles = StyleSheet.create({
 })
 
 export default class App extends Component {
+  getSetLocationHandler = () => {
+    console.log('Location Button Pressed')
+  }
+
   getSetAlarmHandler = () => {
     console.log('Button Pressed')
   }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -58,6 +64,7 @@ export default class App extends Component {
           {this.state.date}
         </Text>
         <SetAlarm onSetAlarm={this.getSetAlarmHandler}/>
+        <SetLocation onGetLocation={this.getSetLocationHandler}/>
       </View>
     )
   }
