@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
 export default class App extends Component {
   getSetAlarmHandler = () => {
-
+    console.log('Button Pressed')
   }
   constructor(props) {
     super(props);
